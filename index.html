@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+            <title>HOME</title>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device=width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="homepage.css">
+            <script src="jquery-3.6.1.js"></script>
+	  <script>
+		var i=0;
+		$(document).ready(function(){
+			$('.slidertitle, #slider img').hide();
+			showNextImage();
+			setInterval('showNextImage()',3000);
+		});
+		
+		function showNextImage(){
+			i++;
+			$('#sliderImage' +i).appendTo('#slider').fadeIn(1200).delay(1200).fadeOut(1200);
+			$('#title' +i).appendTo('#slider').fadeIn(1200).delay(1200).fadeOut(1200);
+			if (i==4){i=0; }
+		};
+      </script>
+    </head>
+        <body>
+              <div class="menu__bar">
+                    <h1 class="logo">H&D <span><i>LaundryShop.</i></span></h1>
+                    <ul>
+                      <li><a href="homepage.html">Home</a></li>
+                       <li><a href="pricecheckpage.html">Price Check</a></li>
+                       <li><a href="logoutpage.html">Log Out</a></li>
+                    </ul>
+                    
+          </div>
+             <div id="slider">
+                <img id="sliderImage1" src="img/welcome.png">
+                <div class="slidertitle" id="title">Image 1</div>
+
+                <img id="sliderImage2" src="img/HD.jpg">
+                <div class="slidertitle" id="title">Image 2</div>
+                
+                <img id="sliderImage3" src="img/laundry2.jpg">
+                <div class="slidertitle" id="title">Image 3</div>
+                
+                <img id="sliderImage4" src="img/laundry3.jpg">
+                <div class="slidertitle" id="title">Image 4</div> 
+           </div>
+                 
+                    <br><br><br><br><br><br<br><br><br><br><br><br><br><br><br><br><br><br><br style="color:palevioletred ;">
+                    <div style="background-color: palevioletred;">
+                      <i><h2 class="com__profile">LAUNDRY SHOP PROFILE</h2></i>
+                      <br><br>
+
+                          <p><li class="class2">
+                            <b><i>H&D Laundry shop</i></b> is one of the most popular businesses in the whole province.<br>
+                            It opened on February 8 2022.<br>
+                            The shop is located at Poblacion Norte, Sta. Maria Ilocos Sur.<br>
+                            This company has many branches in the province.<br>
+                            H&D laundry shop is highly recommended
+                            with the quality of services to the people,and to have a good satisfaction.<br>
+                            It has 30 washing machines inside, so there is no panic happen going here.<br>
+                            For more info, Click the Price check button above!<br>
+                            </p></li>
+                  </div>   
+    </body>
+</html>

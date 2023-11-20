@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PRICE CHECK</title>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device=width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="pricecheck.css">
+
+    </head>
+    <body>
+        <div class="menu__bar">
+            <h1 class="logo">H&D <span><i>LaundryShop.</i></span></h1>
+            <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pricecheckpage.html">Price Check</a></li>
+        <li><a href="logoutpage.html">Log Out</a></li>
+    </ul>
+        </div>
+       <h1 class="pricecheck">Input to Check The Price</h1>
+        <br><br>
+
+        <script>
+            function multiplyBy()
+    {
+           num1 = document.getElementById("firstNumber").value;
+           num2 = document.getElementById("secondNumber").value;
+           num3 = document.getElementById("thirdNumber").value;
+           num4 = document.getElementById("fourthNumber").value;
+
+           num5 = (num1 * num2) + (num1 * num3);
+           num6 = num5 * num4;
+           document.getElementById("result").innerHTML = (num1 * num2) + (num1 * num3);
+           document.getElementById("result2").innerHTML = num5 * num4;
+           document.getElementById("result3").innerHTML = num5 - num6;
+    }
+       </script>
+     <div align="center" style="color:orange ; font-family: Georgia, 'Times New Roman', Times, serif; border-radius: 5px; font-size: 22px; background:rgba(0,0,0,0.3) ;border-radius: 100%;">
+         <form>
+             <b>Weight</b><br>
+             <input type="text" id="firstNumber" style="border-radius: 10px;width: 200px; height: 28px;border:3px solid blue;"/><br><br>
+
+             <b>Service</b><br>
+             <select name="service" size="1" id="secondNumber" style="border-radius:10px ; width: 200px; height: 28px;border:3px solid blue;">
+                <option value="1000">Wash Dry
+                <option value="1200">Wash Dry and Ironing
+                <option value="900">Ironing only
+             </select><br><br>
+
+             <b>Type</b><br>
+             <select name="type" size="1" id="thirdNumber"style="border-radius:10px ;width: 200px; height: 28px; border:3px solid blue;">
+                <option value="">Regular
+                <option value="200">Express
+             </select><br><br>
+
+             <b>Membership</b><br>
+             <select name="type" size="1" id="fourthNumber"style="border-radius:10px ;width: 200px; height: 28px;border:3px solid blue; transition:0.25px;">
+                <option value="">Non Member
+                <option value="0.1">Member
+             </select><br><br>
+
+             <input type="button" onclick="multiplyBy()" value="Check" style="border-radius:10px ;width: 200px; height: 28px;border:3px solid blue;"/>
+         </form>
+             <p>Total price is : <br>
+                <span id = "result" style="color: blue ;"></span>
+             </p>
+
+             <p>Total discount is : <br>
+                <span id = "result2" style="color: blue ;"></span>
+             </p>
+
+             <p>Total payment is : <br>
+                <span id = "result3" style="color: blue ;"></span>
+             </p>
+     </div>
+    </body>
+</html>
